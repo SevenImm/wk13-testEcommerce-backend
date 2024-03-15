@@ -5,22 +5,13 @@ Internet retail, also known as e-commerce, plays a significant role within the e
 ## Installation
 To install this application, clone the repository to your local machine:
 
-```
+
 To use this application, you need to have MySQL installed on your machine. Create and seed the database using the following commands:
 ## Create the database
 ```bash mysql -u root -p
 source db/schema.sql
 exit
 ```
-
-### Categories
- - (GET) localhost:3001/api/categories
- - (GET) localhost:3001/api/categories/1
- - [POST] http://localhost:3001/api/categories
-    - json: {"category_name": "My favorite Category"}
-- (PUT) http://localhost:3001/api/categories/2
-    - json: {"category_name": "Updated Category"}
-- (DELETE) http://localhost:3001/api/categories/1
 
 ## Seed the database
 ```bash
@@ -39,10 +30,10 @@ The database contains the following models:
 ## API Routes
 The application supports the following API routes:
 
-GET, POST, PUT, DELETE routes for categories, products, and tags.
-Routes to view all categories/products/tags or a single category/product/tag.
+* GET, POST, PUT, DELETE routes for categories, products, and tags.
+* Routes to view all categories/products/tags or a single category/product/tag.
 
-Urls used in video:
+# Routes:
 ### Products
 - (GET)localhost:3001/api/products
 - (GET) localhost:3001/api/products/1
@@ -52,8 +43,6 @@ Urls used in video:
     - json data: {"product_name": "Updated Product", "price": 29.99, "stock": 20, "category_id": 2}
 (DELETE)http://localhost:3001/api/products/1
 
-
-
 ### Tags
 - (GET) localhost:3001/api/tags
 - (GET) localhost:3001/api/tags/1
@@ -62,6 +51,15 @@ Urls used in video:
 - (DELETE) localhost:3001/api/tags/2
 - (PUT) http://localhost:3001/api/tags/9
     - json: {"tag_name": "Updated to my Favorite Tag"}
+
+### Categories
+ - (GET) localhost:3001/api/categories
+ - (GET) localhost:3001/api/categories/1
+ - [POST] http://localhost:3001/api/categories
+    - json: {"category_name": "My favorite Category"}
+- (PUT) http://localhost:3001/api/categories/2
+    - json: {"category_name": "Updated Category"}
+- (DELETE) http://localhost:3001/api/categories/1
 
 
 
